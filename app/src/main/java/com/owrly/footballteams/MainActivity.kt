@@ -32,8 +32,7 @@ class MainActivity : AppCompatActivity() {
                 recyclerView {
                     layoutManager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false)
                     adapter = RecyclerViewAdapter(context, clubs){
-                        val toast = Toast.makeText(context, it.name, Toast.LENGTH_SHORT)
-                        toast.show()
+                        toast(it.name.toString())
                         startActivity<DetailActivity>("club" to it)
                     }
                 }.lparams(matchParent, wrapContent)

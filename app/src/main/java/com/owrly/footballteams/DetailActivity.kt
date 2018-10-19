@@ -30,10 +30,6 @@ class DetailActivity : AppCompatActivity() {
                         margin = dip(8)
                     }
             nameTextView = textView()
-                    .lparams(dip(60),dip(60)){
-                        gravity = Gravity.CENTER
-                        margin = dip(8)
-                    }
             descTextView = textView()
         }
 
@@ -42,6 +38,6 @@ class DetailActivity : AppCompatActivity() {
 
         Glide.with(this).load(club?.image).into(logoImageView)
         nameTextView.text = club?.name
-        nameTextView.text = club?.desc
+        descTextView.text = club?.desc
     }
 }
